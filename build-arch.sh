@@ -74,7 +74,7 @@ export FIM_COMPRESSION_LEVEL=6
 
 export LD_LIBRARY_PATH="/pcsx2/lib:$LD_LIBRARY_PATH"
 
-/pcsx2/bin/pcsx2-qt
+/pcsx2/bin/pcsx2-qt "$@"
 EOL
 chmod +x "$build_dir"/pcsx2.sh
 "$build_dir"/arch.fim fim-root cp "$build_dir"/pcsx2.sh /fim/pcsx2.sh
