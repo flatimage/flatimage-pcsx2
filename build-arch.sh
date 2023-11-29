@@ -77,10 +77,11 @@ export LD_LIBRARY_PATH="/pcsx2/lib:$LD_LIBRARY_PATH"
 /pcsx2/bin/pcsx2-qt "$@"
 EOL
 chmod +x "$build_dir"/pcsx2.sh
-"$build_dir"/arch.fim fim-root cp "$build_dir"/pcsx2.sh /fim/pcsx2.sh
+"$build_dir"/arch.fim fim-root mkdir -p /fim/scripts
+"$build_dir"/arch.fim fim-root cp "$build_dir"/pcsx2.sh /fim/scripts/pcsx2.sh
 
 # Set default command
-"$build_dir"/arch.fim fim-cmd /fim/pcsx2.sh
+"$build_dir"/arch.fim fim-cmd /fim/scripts/pcsx2.sh
 
 # Set perms
 "$build_dir"/arch.fim fim-perms-set wayland,x11,pulseaudio,gpu,session_bus,input,usb
